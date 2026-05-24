@@ -1,6 +1,6 @@
-# xyron-mnist-esp32
+# hasaki-mnist-esp32
 
-MNIST handwritten digit recognition running entirely on an ESP32-C3 Super Mini, using a neural network header exported by Xyron.
+MNIST handwritten digit recognition running entirely on an ESP32-C3 Super Mini, using a neural network header exported by Hasaki.
 
 No frameworks. No runtime. Just a C header and a microcontroller.
 
@@ -90,7 +90,7 @@ Open `http://<ESP32_IP>` on any browser — desktop, phone, or tablet on the sam
 
 ## Model
 
-Trained with **Xyron v3.0.1**:
+Trained with **Hasaki v3.0.1**:
 
 | Parameter | Value |
 |-----------|-------|
@@ -104,20 +104,20 @@ Trained with **Xyron v3.0.1**:
 
 ---
 
-## Trained with Xyron
+## Trained with Hasaki
 
 ```bash
 # Train
-xyron -d 784,64,10 -act relu,softmax -a train \
+hasaki -d 784,64,10 -act relu,softmax -a train \
       -f mnist_train.csv -test-file mnist_test.csv \
       -e 1000 -l 0.001 --adam -o mnist_model.txt
 
 # Export INT8 header
-xyron -d 784,64,10 -act relu,softmax -a export \
+hasaki -d 784,64,10 -act relu,softmax -a export \
       -m mnist_model.txt -o mnist_int8.h -q int8
 ```
 
-Xyron will be available soon
+Hasaki will be available soon
 
 ---
 
