@@ -11,7 +11,7 @@
 // ===== INPUT NORMALIZATION METADATA =====
 // Use these ranges to normalize inputs BEFORE calling predict()
 
-// xyron exported model
+// hasaki exported model
 
 // Input ranges (min/max observed during training)
 // NOTE: Normalize inputs BEFORE calling predict():
